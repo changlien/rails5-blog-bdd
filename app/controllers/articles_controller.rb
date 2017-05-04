@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.save
     flash[:success] = "Article has been created"
+    redirect_to_articles_path
   end
   
 end
